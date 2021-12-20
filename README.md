@@ -6,13 +6,16 @@ MySQL Database API
 * Python >= 3.8
 ## Requirements
 ### MySQL
-Required MySQL Client, libmysqlclient-dev
+Required MySQL Client, libmysqlclient-dev   
 Ubuntu:
 ```bash
 $ sudo apt-get install mysql-client libmysqlclient-dev
 ```
 ### Python3 Dependencies
+```bash
 pip3 install -r requirements.txt
+```
+#### Dependencies List:
 * fastapi
 * mysql-connector-python
 * mysqlclient
