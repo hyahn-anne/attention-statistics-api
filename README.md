@@ -16,11 +16,13 @@ $ sudo apt-get install mysql-client libmysqlclient-dev
 pip3 install -r requirements.txt
 ```
 #### Dependencies List:
+```
 * fastapi
 * mysql-connector-python
 * mysqlclient
 * SQLAlchemy
 * uvicorn   
+```
    
 If python version < 3.8:
 ```bash
