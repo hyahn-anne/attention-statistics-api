@@ -13,7 +13,7 @@ $ sudo apt-get install mysql-client libmysqlclient-dev
 ```
 ### Python3 Dependencies
 ```bash
-pip3 install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 #### Dependencies List:
 ```
@@ -26,7 +26,7 @@ pip3 install -r requirements.txt
    
 If python version < 3.8:
 ```bash
-pip3 install typing_extensions
+$ pip3 install typing_extensions
 ```
 ### Database Config
 Before run server, create database config file first.
