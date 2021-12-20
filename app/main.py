@@ -8,8 +8,11 @@ from router.routers import router
 from common.metadata import metadata
 
 
+"""
+# Set Debug Logger
 logging.basicConfig()
-logging.getLogger("sqlalchemy.engine").setLevel(logging.INFO)
+logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
+"""
 
 app = FastAPI(title=metadata.title,
         description=metadata.description,
@@ -19,10 +22,10 @@ app = FastAPI(title=metadata.title,
 app.include_router(router)
 
 
-@app.get("/")
+@app.get('/')
 async def root():
     return RedirectResponse(url='/docs')
 
 
 if __name__ == '__main__':
-    uvicorn.run("main:app", port=9000, log_level="debug", reload=True)
+    uvicorn.run(app, host='0.0.0.0', port=9000)

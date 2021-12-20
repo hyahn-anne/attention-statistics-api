@@ -45,11 +45,11 @@ $ python3 app/main.py
 ```
 In your browser:
 ```
-http://localhost:9000/{API URL}
+http://0.0.0.0:9000/{API URL}
 ```
 ## Documentation
 In your browser:
 ```
-http://localhost:9000/docs
+http://0.0.0.0:9000/docs
 ```
 If you access root page, redirect at docs page.

@@ -9,7 +9,7 @@ from database.db import BaseModel
 
 
 class AttentionDetail(BaseModel):
-    __tablename__ = "attention_detail"
+    __tablename__ = 'attention_detail'
     user_id = Column(Integer, primary_key=True)
     created_yyyymmdd = Column(Date, primary_key=True)
     daily_attention_score = Column(Float)
@@ -22,7 +22,7 @@ class AttentionDetail(BaseModel):
 
 
 class AttentionGraph(BaseModel):
-    __tablename__ = "attention_graph"
+    __tablename__ = 'attention_graph'
     problem_logs_id = Column(Integer, primary_key=True)
     user_id = Column(Integer)
     created_yyyymmdd = Column(Date)
@@ -32,7 +32,7 @@ class AttentionGraph(BaseModel):
 
 
 class AttentionPredictLesson(BaseModel):
-    __tablename__ = "attention_predict_lesson"
+    __tablename__ = 'attention_predict_lesson'
     user_id = Column(Integer, primary_key=True)
     created_yyyymmdd = Column(Date, primary_key=True)
     lesson_id = Column(Integer)

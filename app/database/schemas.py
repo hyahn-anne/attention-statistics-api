@@ -11,7 +11,7 @@ class AttentionDetailBase(BaseModel):
 
 
 class AttentionScoreAverage(AttentionDetailBase):
-    daily_attention_score: float = Field(alias="average_attention_score")
+    daily_attention_score: float = Field(alias='average_attention_score')
     class Config:
         orm_mode = True
         allow_population_by_field_name = True

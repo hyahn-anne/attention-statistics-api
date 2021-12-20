@@ -36,7 +36,7 @@ def get_avg_attention_score(session: Session, user_id: int, start_date: date, en
         float: average of daily attention score for last 3 days
     """
     query = session.query(
-        func.avg(AttentionDetail.daily_attention_score).label("daily_attention_score"))
+        func.avg(AttentionDetail.daily_attention_score).label('daily_attention_score'))
     query = query.filter(
         AttentionDetail.user_id == user_id,
         AttentionDetail.created_yyyymmdd.between(start_date, end_date))
@@ -61,7 +61,7 @@ def get_assessment_type_code_log(session: Session, user_id: int, date: date):
     """
     query = session.query(
         AttentionDetail.daily_assessment_type_code,
-        func.count(AttentionDetail.daily_assessment_type_code).label("count"))
+        func.count(AttentionDetail.daily_assessment_type_code).label('count'))
     query = query.filter(
         AttentionDetail.user_id == user_id,
         AttentionDetail.created_yyyymmdd == date).group_by(AttentionDetail.daily_assessment_type_code)
