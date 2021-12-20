@@ -12,7 +12,10 @@ Ubuntu:
 $ sudo apt-get install mysql-client libmysqlclient-dev
 ```
 ### Python3 Dependencies
+```bash
 pip3 install -r requirements.txt
+```
+#### Dependencies List:
 * fastapi
 * mysql-connector-python
 * mysqlclient
