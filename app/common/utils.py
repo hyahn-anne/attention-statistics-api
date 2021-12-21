@@ -18,7 +18,7 @@ def get_ndays_ago(date: date_type, days: int) -> date_type:
     return ndays_ago_date
 
 
-def convert_tuplelist_to_dict(tlist: list, fields: list):
+def group_by_user_id(tlist: list, key_fields: list):
     """
     1) groupping values of tuple by key of tuple
     2) converting tuple list of 1) to dictionary list 
@@ -34,5 +34,5 @@ def convert_tuplelist_to_dict(tlist: list, fields: list):
     for k, v in tlist:
         group_dict.setdefault(k, []).append(v)
     group_list = list(group_dict.items())
-    dict_list = [dict(zip(fields, t)) for t in group_list]
+    dict_list = [dict(zip(key_fields, t)) for t in group_list]
     return dict_list

@@ -2,7 +2,7 @@ from datetime import date
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 from model.models import AttentionDetail, AttentionGraph, AttentionPredictLesson
-from common.utils import convert_tuplelist_to_dict
+from common.utils import group_by_user_id
 
 
 def get_attention_score(session: Session, user_id: int, date: date):
@@ -128,7 +128,7 @@ def get_wrong_problems(session: Session, user_id: int, date: date):
         AttentionGraph.accuracy == 0
     )
     result = query.all()
-    dict_result = convert_tuplelist_to_dict(
+    dict_result = group_by_user_id(
         result,
         [AttentionGraph.problem_id.name, AttentionGraph.real_elapsed_time.name]
     )
@@ -158,7 +158,7 @@ def get_high_difficulty_users(session: Session, date: date, difficulty: float = 
         AttentionPredictLesson.lesson_subjective_difficulty >= difficulty
     ).order_by(AttentionPredictLesson.lesson_subjective_difficulty)
     result = query.all()
-    dict_result = convert_tuplelist_to_dict(
+    dict_result = group_by_user_id(
         result,
         [AttentionPredictLesson.user_id.name, AttentionPredictLesson.lesson_id.name]
     )
