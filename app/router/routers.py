@@ -46,10 +46,10 @@ async def get_attention_summary(user_id: int, date: date_type, session: Session 
         200: {
             'content': {
                 'application/json': {
-                    'example': {
+                    'example': [{
                         'problem_id': 0,
                         'real_elapsed_time': 0.0
-                    }
+                    }]
                 }
             }
         }
@@ -67,10 +67,10 @@ async def get_wrong_problems(user_id: int, date: date_type, session: Session = D
         200: {
             'content': {
                 'application/json': {
-                    'example': {
+                    'example': [{
                         'user_id': 0,
                         'lesson_id': 0
-                    }
+                    }]
                 }
             }
         }
