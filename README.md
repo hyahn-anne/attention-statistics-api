@@ -53,8 +53,11 @@ In your browser:
 http://0.0.0.0:9000/{API URL}
 ```
 ## Documentation
-In your browser:
+Notion:   
+https://robust-trowel-8ac.notion.site/Attention-Statistics-API-1f11b5926cb34762a6ce34ef25f2e064
+
+OpenAPI Docs - In your browser:
 ```
 http://0.0.0.0:9000/docs
 ```
-If you access root page, redirect at docs page.
+
