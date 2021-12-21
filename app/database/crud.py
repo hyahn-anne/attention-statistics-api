@@ -9,11 +9,11 @@ def get_attention_score(session: Session, user_id: int, date: date):
     """
     return daily attention score by user_id and date
 
-    parameters
+    parameters :
         user_id (int): student id in database
-        date (date): specific date from url query parameter
+        date (date): specific date from query string
 
-    returns
+    returns :
         int: daily attention score
     """
     query = session.query(AttentionDetail.daily_attention_score).filter(
@@ -27,12 +27,12 @@ def get_avg_attention_score(session: Session, user_id: int, start_date: date, en
     """
     return average of daily attention scores for last 3 days by user_id and date
 
-    parameters
+    parameters :
         user_id (int): student id in database
         start_date (date): the date of 2 days ago from end_date
-        end_date (date): specific date from url query parameter
+        end_date (date): specific date from query string
 
-    returns
+    returns :
         float: average of daily attention score for last 3 days
     """
     query = session.query(
@@ -44,13 +44,13 @@ def get_avg_attention_score(session: Session, user_id: int, start_date: date, en
     return result
 
 
-def get_assessment_type_code_log(session: Session, user_id: int, date: date):
+def get_assessment_type_codes(session: Session, user_id: int, date: date):
     """
     return assessment type code and the number of code
 
-    parameters:
+    parameters :
         user_id (int): student id in database
-        date (datetime): specific date from url query parameter
+        date (datetime): specific date from query string
 
     returns ::
         dict:
@@ -69,14 +69,14 @@ def get_assessment_type_code_log(session: Session, user_id: int, date: date):
     return result
 
 
-def get_attention_summary_for_threedays(session: Session, user_id: int, start_date: date, end_date: date):
+def get_problem_logs(session: Session, user_id: int, start_date: date, end_date: date):
     """
     return attention detail summary for last three days
 
-    parameters:
+    parameters :
         user_id (int): student id in database
         start_date (date): the date of 2 days ago from end_date
-        end_date (date): specific date from url query parameter
+        end_date (date): specific date from query string
 
     returns ::
         dict:
@@ -107,9 +107,9 @@ def get_wrong_problems(session: Session, user_id: int, date: date):
     """
     return id of wrong problems and elapsed time
 
-    parameters:
+    parameters :
         user_id (int): student id in database
-        date (datetime): specific date from url query parameter
+        date (datetime): specific date from query string
 
     returns ::
         dict:
@@ -139,8 +139,8 @@ def get_high_difficulty_users(session: Session, date: date, difficulty: float = 
     """
     return user and lesson id of level 4 or higher
 
-    parameters:
-        date (datetime): specific date from url query parameter
+    parameters :
+        date (datetime): specific date from query string
 
     returns ::
         dict:
@@ -170,9 +170,9 @@ def get_max_predict_accuracy_lesson(session: Session, user_id: int, date: date):
     return lession id, lesson title, chapter id and lesson predict accuracy
     with max predict accruracy
 
-    parameters:
+    parameters :
         user_id (int): student id in database
-        date (datetime): specific date from url query parameter
+        date (datetime): specific date from query string
 
     returns ::
         dict:

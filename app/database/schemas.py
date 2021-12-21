@@ -1,7 +1,5 @@
 from datetime import date as date_type
 from pydantic import BaseModel, Field
-from pydantic.class_validators import validator
-from sqlalchemy import orm
 
 
 class AttentionDetailBase(BaseModel):
@@ -10,7 +8,7 @@ class AttentionDetailBase(BaseModel):
         orm_mode = True
 
 
-class AttentionScoreAverage(AttentionDetailBase):
+class AttentionScoreAverage(BaseModel):
     daily_attention_score: float = Field(alias='average_attention_score')
     class Config:
         orm_mode = True
