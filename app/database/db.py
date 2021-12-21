@@ -6,7 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from common.config import db_config
 
 
-DB_URL = db_config.DATABASE_URL
+DB_URL = db_config.DATABASE_URL + '?charset=utf8'
 engine = create_engine(DB_URL)
 session_local = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 BaseModel = declarative_base()
