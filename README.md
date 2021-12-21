@@ -23,11 +23,6 @@ $ pip3 install -r requirements.txt
 * SQLAlchemy
 * uvicorn   
 ```
-   
-If python version < 3.8:
-```bash
-$ pip3 install typing_extensions
-```
 ### Database Config
 Before run server, create database config file first    
 Config file location: {PROJECT_DIR}/app/common/config.json   
