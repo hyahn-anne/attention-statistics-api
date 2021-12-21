@@ -1,6 +1,9 @@
 # APIs for Attention Statistic
 APIs for Statistics of User's Attention in Learning
 MySQL Database API
+## Documentation
+Notion:   
+https://robust-trowel-8ac.notion.site/Attention-Statistics-API-1f11b5926cb34762a6ce34ef25f2e064
 ## Environments
 * Ubuntu 20.04 or Mac
 * Python >= 3.8
@@ -47,10 +50,6 @@ In your browser:
 ```
 http://0.0.0.0:9000/{API URL}
 ```
-## Documentation
-Notion:   
-https://robust-trowel-8ac.notion.site/Attention-Statistics-API-1f11b5926cb34762a6ce34ef25f2e064
-
 OpenAPI Docs - In your browser:
 ```
 http://0.0.0.0:9000/docs
