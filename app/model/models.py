@@ -1,9 +1,3 @@
-import sys
-if sys.version_info >= (3, 8):
-    from typing import TypedDict
-else:
-    from typing_extensions import TypedDict
-from pydantic.main import create_model
 from sqlalchemy import Column, Integer, Float, Date, NVARCHAR
 from database.db import BaseModel
 

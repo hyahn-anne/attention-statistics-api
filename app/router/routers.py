@@ -1,8 +1,7 @@
 from typing import List
-from datetime import date as date_type, timedelta
+from datetime import date as date_type
 from fastapi import APIRouter, Depends
 from fastapi.responses import JSONResponse
-from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from database import crud, schemas
 from database.db import init_database, get_session
@@ -48,7 +47,7 @@ async def get_attention_summary(user_id: int, date: date_type, session: Session 
                 'application/json': {
                     'example': [{
                         'problem_id': 0,
-                        'real_elapsed_time': 0.0
+                        'real_elapsed_time': [0.1, 0.2]
                     }]
                 }
             }
@@ -69,7 +68,7 @@ async def get_wrong_problems(user_id: int, date: date_type, session: Session = D
                 'application/json': {
                     'example': [{
                         'user_id': 0,
-                        'lesson_id': 0
+                        'lesson_id': [0, 1]
                     }]
                 }
             }
